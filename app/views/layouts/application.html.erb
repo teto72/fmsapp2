@@ -28,6 +28,9 @@
     <% end %>
 
 
+    <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
+
+
     <%= yield %>
   </body>
 </html>
