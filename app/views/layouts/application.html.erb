@@ -22,11 +22,11 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-
-    <%= link_to root_path, class: "nav-bar" do%>
-      <h1 class="maintitle" style="font-family: cursive;">favrit/moter/sport</h1>
-    <% end %>
-
+    <header class="header">
+      <%= link_to root_path, class: "nav-bar" do%>
+        <h1 class="maintitle" style="font-family: cursive;">favrit/moter/sport</h1>
+      <% end %>
+    </header>
 
     <% if user_signed_in?%>
       <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
