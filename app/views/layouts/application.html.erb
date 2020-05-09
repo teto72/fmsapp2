@@ -28,7 +28,8 @@
     <% end %>
 
 
-    <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
+      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
+      <%= link_to "Login", new_user_session_path, class: "button--login" %>
 
 
     <%= yield %>
