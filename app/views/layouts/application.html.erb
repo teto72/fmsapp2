@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,7 +22,18 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
+    <header class="header">
+      <%= link_to root_path, class: "nav-bar" do%>
+        <h1 class="maintitle" style="font-family: cursive;">favrit/moter/sport</h1>
+      <% end %>
+    </header>
 
+    <% if user_signed_in?%>
+      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
+    <%else%>
+      <%= link_to "Login", new_user_session_path, class: "button--login" %>
+      <%= link_to "Sign_up", new_user_registration_path, class: "button--signup"%>
+    <% end %>
 
     <%= yield %>
   </body>

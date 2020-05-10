@@ -14,3 +14,7 @@
  *= require_self
  */
  @import "bulma";
+
+body,html{
+  height: 100vh;
+}
