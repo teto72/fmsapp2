@@ -8,18 +8,27 @@
       <div class="column is-7">
         <div class="notification is-primary">
 
-          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field">
               <%= f.label :email, class:"label" %>
-              <div class="contrl has-icon-left">
-              <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"input" %>
-
-              </div>
+              <p class="control has-icons-left">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "email", class:"input" %>
+                <span class="icon is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </p>
             </div>
+
+            
 
             <div class="field">
               <%= f.label :password, class:"label" %>
-              <%= f.password_field :password, autocomplete: "current-password", class:"input" %>
+              <p class="control has-icons-left">
+                <%= f.password_field :password, autocomplete: "current-password", :placeholder => "password", class:"input" %>
+                <span class="icon is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+              </p>
             </div>
 
             <% if devise_mapping.rememberable? %>
@@ -30,7 +39,7 @@
             <% end %>
 
             <div class="actions">
-              <%= f.submit "Log in" %>
+              <%= f.submit "Log in", class:"button is-link"%>
             </div>
           <% end %>
 
