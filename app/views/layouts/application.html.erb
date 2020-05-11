@@ -29,10 +29,11 @@
     </header>
 
     <% if user_signed_in?%>
-      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
+      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun is-link"%>
     <%else%>
-      <%= link_to "Login", new_user_session_path, class: "button--login" %>
-      <%= link_to "Sign_up", new_user_registration_path, class: "button--signup"%>
+      <div class="">
+      <%= link_to "Login", new_user_session_path, class: "button  is-link " %>
+      <%= link_to "Sign_up", new_user_registration_path, class: "button is-link "%>
     <% end %>
 
     <%= yield %>
