@@ -4,18 +4,18 @@
 
 <%= form_for @user do |f| %>
 
-<%=f.label :username %>
-<%= f.text_field :username %>
+  <%=f.label :username %>
+  <%= f.text_field :username %>
 
-<%=f.label :email %>
-<%= f.text_field :email %>
+  <%=f.label :email %>
+  <%= f.text_field :email %>
 
-<%=f.label :profile %>
-<%= f.text_field :profile %>
+  <%=f.label :profile %>
+  <%= f.text_field :profile %>
 
-<%=f.label :profile_image%>
-<%= f.attachment_field :profile_image %>
+  <%=f.label :profile_image%>
+  <%= f.attachment_field :profile_image %>
 
-<%= link_to "編集",edit_user_path(@user),class:"button is-link"%>
+  <%=f.submit "更新",class:"button is-link"%>
 
 <% end %>
