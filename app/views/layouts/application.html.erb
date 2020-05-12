@@ -22,19 +22,47 @@
         <p class="alert"><%= alert %></p>
       </div>
     <% end %>
-    <header class="header">
-      <%= link_to root_path, class: "nav-bar" do%>
-        <h1 class="maintitle" style="font-family: cursive;">favrit/moter/sport</h1>
+  <nav class="navbar is-black">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-4 has-text-warning" style="font-family: cursive;">moto//up</h1>
+        <% end %>
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <% if user_signed_in?%>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "button is-link"%>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <%else%>
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "Login", new_user_session_path, class: "button  is-link " %>
+                </p>
+                <p class="control">
+                  <%= link_to "Sign_up", new_user_registration_path, class: "button is-link "%>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
-    </header>
-
-    <% if user_signed_in?%>
-      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "bottun--logput"%>
-    <%else%>
-      <%= link_to "Login", new_user_session_path, class: "button--login" %>
-      <%= link_to "Sign_up", new_user_registration_path, class: "button--signup"%>
-    <% end %>
-
+    </nav>  
     <%= yield %>
   </body>
 </html>
