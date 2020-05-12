@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<header class="header">
+  <h1 class="profile-title">プロフィール</h1>
+</header>
+
+<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" %>
+
+<%= @user.username%>
+
+<%= @user.profile%>
+
+<% if @user.id == current_user.id %>
+  <%= @user.email%>
+<% end %>
+
+<%= link_to "編集", edit_user_path(@user), class:"button is-links"%>
+

@@ -43,3 +43,17 @@ body,html{
     color: white;
   }
 }
+
+.header{
+  height: 80px;
+  border: inset 8px aqua;
+}
+
+.profile-title{
+  height: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color:rgb(0, 140, 255);
+}
