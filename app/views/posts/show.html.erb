@@ -1,7 +1,7 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
 
-<%= @post.user.username %>
+<%=link_to @post.user.username,users_path(@post.user.id) %>
 
 <%= attachment_image_tag @post, :image %>
 
