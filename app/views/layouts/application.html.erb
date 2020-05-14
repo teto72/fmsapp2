@@ -26,15 +26,19 @@
 
       <% if user_signed_in?%>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-item">
-              <%= link_to "投稿一覧",posts_path,class:"button is-link"%>
-          </div>
-          <div class="navbar-item">
-              <%= link_to "投稿",new_post_path,class:"button is-link" %>
+          <div class="navbar-start">
+            <p class="navbar-item">
+                <%= link_to "投稿一覧",posts_path,class:"button is-link"%>
+            </p>
+            <p class="navbar-item">
+                <%= link_to "投稿",new_post_path,class:"button is-link" %>
+            </p>
           </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "マイページ",user_path(current_user),class:"button is-link" %>
                 <p class="control">
                 <%= link_to "ユーザー一覧",users_path,class:"button is-link"%>
                 </p>
