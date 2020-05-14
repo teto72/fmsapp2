@@ -57,3 +57,16 @@ body,html{
   text-align: center;
   color:rgb(0, 140, 255);
 }
+
+.header-posts{
+  height: 100px;
+  background: linear-gradient(90deg, rgb(233, 237, 22), rgb(19, 26, 10));
+  h1{
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    color: whitesmoke;
+    border-bottom: inset 5px black;
+  }
+}
