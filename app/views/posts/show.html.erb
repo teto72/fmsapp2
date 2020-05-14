@@ -1,6 +1,8 @@
 
 
-<%=link_to @post.user.username,users_path(@post.user.id) %>
+<%=link_to user_path(@post.user.id) do %>
+  <%= @post.user.username%>
+<% end %>
 
 <%= attachment_image_tag @post, :image %>
 
