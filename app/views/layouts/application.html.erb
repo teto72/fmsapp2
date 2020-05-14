@@ -14,8 +14,8 @@
 
   <nav class="navbar is-black">
       <div class="navbar-brand">
-        <%= link_to posts_path, class: "navbar-item" do %>
-          <h1 class="title is-4 has-text-warning" style="font-family: HoeflerText-Black;">Moto//Up</h1>
+        <%= link_to root_path, class: "navbar-item" do %>
+          <h1 class="title is-3 has-text-warning" style="font-family: HoeflerText-Black;">Moto//Up</h1>
         <% end %>
         <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
           <span></span>
@@ -26,6 +26,12 @@
 
       <% if user_signed_in?%>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-item">
+              <%= link_to "投稿一覧",posts_path,class:"button is-link"%>
+          </div>
+          <div class="navbar-item">
+              <%= link_to "投稿",new_post_path,class:"button is-link" %>
+          </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
@@ -41,6 +47,9 @@
         </div>
       <%else%>
         <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-item">
+            <%= link_to "投稿一覧",posts_path,class:"button is-link"%>
+          </div>
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
