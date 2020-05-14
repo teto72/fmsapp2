@@ -3,30 +3,35 @@
 </section>
 
 
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="card-image">
+            <%= attachment_image_tag post, :image,:fill,200,250 %>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <%= attachment_image_tag post.user, :profile_image,fallback:"no-image.png",class:"is-rounded" %>
+                </figure>
+              </div>
+              <div class="content">
+                <p class="title is-5">
+                  <%= post.user.username %>
+                </p>
+              </div>
+            </div>
 
-<% @posts.each do |post| %>
-  <div class="card">
-    <div class="card-image">
-      <%= attachment_image_tag post, :image,:fill,200,250 %>
-    </div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-left">
-          <figure class="image is-64x64">
-            <%= attachment_image_tag post.user, :profile_image,fallback:"no-image.png",class:"is-rounded" %>
-          </figure>
+            <div class="content">
+              <%= post.title %>
+            </div>
+            <%= post.created_at%>
+          </div>
         </div>
-        <div class="content">
-          <p class="title is-5">
-            <%= post.user.username %>
-          </p>
-        </div>
-      </div>
-
-      <div class="content">
-        <%= post.text %>
-      </div>
-      <%= post.created_at%>
+      <% end %>
     </div>
   </div>
-<% end %>
+</section>
