@@ -22,7 +22,9 @@
               </div>
               <div class="content">
                 <p class="title is-5">
-                  <%= post.user.username %>
+                  <%= link_to user_path(post.user.id) do %>
+                    <%= post.user.username %>
+                  <% end %>
                 </p>
               </div>
             </div>
