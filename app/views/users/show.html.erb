@@ -2,7 +2,7 @@
   <h1 class="profile-title">プロフィール</h1>
 </header>
 
-<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" %>
+<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png"%>
 
 <%= @user.username%>
 
@@ -13,3 +13,12 @@
   <%= link_to "編集", edit_user_path(@user), class:"button is-link"%>
 <% end %>
 
+<%= @user.posts.each do |post| %>
+  <div class="images">
+    <%= attachment_image_tag post, :image %>
+  </div>
+  <div>
+    <%= link_to "詳細",post_path(post) %>
+  </div>
+  <%= link_to "削除",post_path(post),method: :delete %>
+<% end %>
