@@ -1,18 +1,25 @@
 <header class="header">
   <h1 class="profile-title">プロフィール</h1>
 </header>
+<section class="content__image">
+  <figure class="image is-128x128">
+    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png" %>
+  </figure>
+    <div class="namebox">
+      <%= @user.username%>
+      <div class="profilebox">
+        <%= @user.profile%>
+      </div>
+    </div>
+    <div class="emailbox">
+      <% if @user.id == current_user.id %>
+        <%= @user.email%>
+        <%= link_to "編集", edit_user_path(@user), class:"button is-link"%>
+      <% end %>
+    </div>
+</section>
 
-<%= attachment_image_tag @user, :profile_image, fallback: "no-image.png"%>
-
-<%= @user.username%>
-
-<%= @user.profile%>
-
-<% if @user.id == current_user.id %>
-  <%= @user.email%>
-  <%= link_to "編集", edit_user_path(@user), class:"button is-link"%>
-<% end %>
-
+<h1>My投稿</h1>
 <%= @user.posts.each do |post| %>
   <div class="images">
     <%= attachment_image_tag post, :image %>

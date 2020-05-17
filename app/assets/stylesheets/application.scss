@@ -75,3 +75,26 @@ body,html{
   height: 300px;
   width: 25%;
 }
+
+.content__image{
+  text-align: 25%;
+  padding-top: 10px;
+  padding-left: 150px;
+  border: solid 2px black;
+  display: flex;
+  position: relative;
+  .namebox{
+    margin-left: 30px;
+    font-size: 40px;
+  }
+  .profilebox{
+    font-size: 10px;
+    border:solid 1px cornsilk;
+  }
+  .emailbox{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
