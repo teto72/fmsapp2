@@ -19,13 +19,37 @@
     </div>
 </section>
 
-<h1>My投稿</h1>
-<%= @user.posts.each do |post| %>
-  <div class="images">
-    <%= attachment_image_tag post, :image %>
+<h1 class="mypost-title">My投稿</h1>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <% @user.posts.each do |post| %>
+        <div class="column is-3">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <%= link_to post_path(post) do %>
+                  <%= attachment_image_tag post, :image, fallback: "no-image.png" %>
+                <% end %>
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <%= link_to"投稿詳細", post_path(post), class: "button is-link"  %>
+                  <% if @user.id == current_user.id %>
+                    <%= link_to "投稿削除",post_path(post), method: :delete, data: {confirm: "削除しますか？"}, class: "button is-link" %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="content">
+                <%= post.created_at.strftime("%Y-%m-%d %H:%M") %> 投稿
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div>
-    <%= link_to "詳細",post_path(post),class:"button is-link" %>
-  </div>
-  <%= link_to "削除",post_path(post),method: :deleted,data: {confirm: "削除しますか？"},class:"button is-link" %>
-<% end %>
+</section>
