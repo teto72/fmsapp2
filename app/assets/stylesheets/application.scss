@@ -70,3 +70,84 @@ body,html{
     border-bottom: inset 5px black;
   }
 }
+
+.images{
+  height: 300px;
+  width: 25%;
+}
+
+.content__image{
+  text-align: 25%;
+  padding-top: 10px;
+  padding-left: 150px;
+  border: solid 2px black;
+  display: flex;
+  position: relative;
+  .namebox{
+    margin-left: 30px;
+    font-size: 40px;
+  }
+  .profilebox{
+    font-size: 10px;
+    border:solid 1px cornsilk;
+  }
+  .emailbox{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+.mypost-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.page-top{
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+}
+#page-top a{
+  border-radius: 10%;
+  background: #006e9f;
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.home-title{
+  line-height: 660px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: HoeflerText;
+  font-variant-east-asian: full-width;
+  text-align: center;
+  color: black;
+}
+
+.back-image{
+  height: 660px;
+  background-color: rgb(238, 241, 28);
+  background-position: center;
+  background-image: url(https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058__480.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.post-showtitle{
+  font-size: 30px;
+  height: 40px;
+  text-align: center;
+}
+
+.example{
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+}
