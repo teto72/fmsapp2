@@ -1,18 +1,20 @@
+<h1 class="post-showtitle">投稿詳細ページ</h1>
 
+<section class="content">
+  <%=link_to user_path(@post.user.id) do %>
+    <%= @post.user.username%>
+  <% end %>
 
-<%=link_to user_path(@post.user.id) do %>
-  <%= @post.user.username%>
-<% end %>
+  <%= attachment_image_tag @post, :image,class:"example" %>
 
-<%= attachment_image_tag @post, :image %>
+  <%= @post.title %>
 
-<%= @post.title %>
+  <%= simple_format @post.text %>
 
-<%= simple_format @post.text %>
-
-<% if @post.user.id == current_user.id %>
-  <%= link_to "編集",edit_post_path, class:"button is-link"%>
-<%end%>
+  <% if @post.user.id == current_user.id %>
+    <%= link_to "編集",edit_post_path, class:"button is-link"%>
+  <%end%>
+</section>
 
 
 
