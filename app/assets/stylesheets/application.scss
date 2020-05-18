@@ -141,13 +141,23 @@ body,html{
 }
 
 .post-showtitle{
-  font-size: 30px;
-  height: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  height: 80px;
+  line-height: 80px;
   text-align: center;
+  color: white;
+  background: linear-gradient(90deg, rgb(233, 237, 22), rgb(19, 26, 10));
+}
+
+.show-content{
+  text-align: center;
+  background-color: papayawhip;
 }
 
 .example{
   width: 600px;
   height: 400px;
+  margin-left: 400px;
   object-fit: contain;
 }
