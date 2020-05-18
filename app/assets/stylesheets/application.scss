@@ -119,3 +119,23 @@ body,html{
   line-height: 50px;
   text-decoration: none;
 }
+
+.home-title{
+  line-height: 660px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: HoeflerText;
+  font-variant-east-asian: full-width;
+  text-align: center;
+  color: black;
+}
+
+.back-image{
+  height: 660px;
+  background-color: rgb(238, 241, 28);
+  background-position: center;
+  background-image: url(https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058__480.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+}
