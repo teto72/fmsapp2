@@ -2,20 +2,28 @@
   <h1 class="edit-title">プロフィール編集画面</h1>
 </header>
 
-<%= form_for @user do |f| %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-6">
+        <%= form_for @user do |f| %>
 
-  <%=f.label :username %>
-  <%= f.text_field :username %>
+          <%=f.label :username %>
+          <%= f.text_field :username,class:"input" %>
 
-  <%=f.label :email %>
-  <%= f.text_field :email %>
+          <%=f.label :email %>
+          <%= f.text_field :email,class:"input" %>
 
-  <%=f.label :profile %>
-  <%= f.text_field :profile %>
+          <%=f.label :profile %>
+          <%= f.text_field :profile,class:"textarea" %>
 
-  <%=f.label :profile_image%>
-  <%= f.attachment_field :profile_image %>
+          <%=f.label :profile_image%>
+          <%= f.attachment_field :profile_image,class:"input" %>
 
-  <%=f.submit "更新",class:"button is-link"%>
+          <%=f.submit "更新",class:"button is-link"%>
 
-<% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

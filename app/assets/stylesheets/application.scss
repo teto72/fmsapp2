@@ -105,21 +105,6 @@ body,html{
   color: black;
 }
 
-.page-top{
-  position: fixed;
-  bottom: 0;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-}
-#page-top a{
-  border-radius: 10%;
-  background: #006e9f;
-  color: #fff;
-  line-height: 50px;
-  text-decoration: none;
-}
-
 .home-title{
   line-height: 660px;
   font-size: 50px;
@@ -128,6 +113,13 @@ body,html{
   font-variant-east-asian: full-width;
   text-align: center;
   color: black;
+}
+
+.edit-title{
+  font-size: 30px;
+  font-weight: bold;;
+  line-height: 80px;
+  text-align: center;
 }
 
 .back-image{
