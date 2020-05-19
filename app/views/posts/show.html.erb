@@ -12,8 +12,8 @@
   </p>
   <%= simple_format @post.text %>
 
-  <% if @post.user.id == current_user.id %>
-    <%= link_to "編集",edit_post_path, class:"button is-link is-right"%>
+  <% if user_signed_in? && @post.user.id == current_user.id %>
+    <%= link_to "編集",edit_post_path(@post), class:"button is-link is-right"%>
   <%end%>
 </section>
 
