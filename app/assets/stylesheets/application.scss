@@ -155,6 +155,9 @@ body,html{
 }
 
 .searchbox{
-  float: right;
+  text-align: center;
   background-color: rgb(233, 237, 22);
+}
+.search-input {
+  height: 40px;
 }
