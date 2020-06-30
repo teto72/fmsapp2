@@ -75,6 +75,8 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem "bulma-rails"
+gem 'fog-aws'
+gem 'carrierwave'
 
 group :development do 
   gem 'web-console'
