@@ -38,9 +38,9 @@ body,html{
   }
 }
 
-.header{
-  height: 80px;
-}
+// .header{
+//   height: 80px;
+// }
 
 .profile-title{
   height: 80px;
@@ -69,25 +69,32 @@ body,html{
   width: 25%;
 }
 
-.content__image{
-  text-align: 25%;
-  padding-top: 10px;
-  padding-left: 150px;
+// ------------------
+// ユーザープロフィール
+// ------------------
+.pf-wrapper {
+  padding: 0 50px;
+  width: 80%;
+  margin:  0 auto;
+}
+.pf-image{
   border: solid 2px black;
   display: flex;
-  position: relative;
+  img {
+    width: 400px;
+    height: 300px;
+    padding: 10px;
+    object-fit: contain;
+  }
   .namebox{
     margin-left: 30px;
     font-size: 40px;
   }
   .profilebox{
     font-size: 10px;
-    border:solid 1px cornsilk;
-  }
-  .emailbox{
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    height: 210px;
+    width: 400px;
+    background-color: whitesmoke;
   }
 }
 
@@ -134,6 +141,7 @@ body,html{
   color: white;
   background: linear-gradient(90deg, rgb(233, 237, 22), rgb(19, 26, 10));
 }
+
 // ---------------
 // 投稿詳細エリア
 // ---------------
