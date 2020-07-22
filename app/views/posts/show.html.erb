@@ -1,16 +1,28 @@
 <h1 class="post-showtitle">投稿詳細ページ</h1>
 
 <section class="show-content">
-  <p>UserName:
-    <%=link_to user_path(@post.user.id) do %>
-      <%= @post.user.username %>
-    <% end %>
-  </p>
-  <%= attachment_image_tag @post, :image,class:"example" %>
-  <p>
-   タイトル: <%= @post.title %>
-  </p>
-  <%= simple_format @post.text %>
+  <div class="show-wrapper">
+    <%= attachment_image_tag @post, :image,class:"example" %>
+    <div class="right-box">
+      <div class="show-name">ユーザーネーム:
+      <br>
+        <%=link_to user_path(@post.user.id) do %>
+          <%= @post.user.username %>
+        <% end %>
+      </div>
+      <div class="show-title">
+      タイトル:
+      <br> 
+      <%= @post.title %>
+      </div>
+      <div class="show-text">
+        テキスト:
+        <br>
+        <%= simple_format @post.text %>
+      </div>
+    </div>
+  </div>
+
 
   <% if user_signed_in? && @post.user.id == current_user.id %>
     <%= link_to "編集",edit_post_path(@post), class:"button is-link is-right"%>
