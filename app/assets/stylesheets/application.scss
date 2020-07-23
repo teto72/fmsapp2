@@ -38,10 +38,6 @@ body,html{
   }
 }
 
-// .header{
-//   height: 80px;
-// }
-
 .profile-title{
   height: 80px;
   line-height: 80px;
@@ -64,10 +60,10 @@ body,html{
   }
 }
 
-.images{
-  height: 300px;
-  width: 25%;
-}
+// .images{
+//   // height: 300px;
+//   // width: 25%;
+// }
 
 // ------------------
 // ユーザープロフィール
@@ -105,6 +101,10 @@ body,html{
   color: black;
 }
 
+
+.home-wrapper {
+  display: flex;
+}
 .home-title{
   line-height: 660px;
   font-size: 50px;
@@ -115,22 +115,84 @@ body,html{
   color: black;
 }
 
-.edit-title{
-  font-size: 30px;
-  font-weight: bold;;
-  line-height: 80px;
-  text-align: center;
+
+// ----------------
+// 今週のおすすめ選手
+// ----------------
+.week-fav {
+  width: 30%;
+  padding: 0 20px;
+  border: 3px solid #666666;
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .fav-img {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
+  }
+  .fav-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: block;
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+  }
+  .fav-img:hover img:nth-of-type(2) {
+    -webkit-transform: translate(-50%, -50%) scale(1.15) !important;
+    transform: translate(-50%, -50%) scale(1.15) !important;
+    opacity: 0;
+  }
+
+  ul {
+    li {
+      margin-bottom: 10px;
+      h4 {
+        color: red;
+        font-weight: bold;
+      }
+    }
+    .name {
+      border-bottom: 2px solid red;
+      font-weight: bold;
+    }
+    .team {
+      font-weight: bold;
+    }
+  }
 }
 
 .back-image{
-  height: 660px;
-  background-color: rgb(238, 241, 28);
-  background-position: center;
+  width: 70%;
   background-image: url(https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058__480.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
+  background-size: cover;
+  object-fit: fill;
+  opacity: 0.7;
 }
+
+                        .edit-title{
+                          font-size: 30px;
+                          font-weight: bold;;
+                          line-height: 80px;
+                          text-align: center;
+                          text-shadow: 2px 2px 3px #666666;
+                        }
 
 .post-showtitle{
   font-size: 40px;
@@ -184,3 +246,5 @@ body,html{
 .search-input {
   height: 40px;
 }
+
+
