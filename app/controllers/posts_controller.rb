@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @posts = Post.search(params[:search]).limit(132)
+    @search = params[:search]
   end
 
   def show
