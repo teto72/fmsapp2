@@ -1,4 +1,48 @@
-<div class="back-image">
-  <h1 class="home-title">MotoUp</h1>
+<section class="home-wrapper">
+  <div class="back-image">
+    <h1 class="home-title">MotoUp</h1>
+  </div>
+  <div class="week-fav bound">
+    <h2>今週のおすすめ選手</h2>
+    <div class="fav-img">
+      <img src="assets/F1VER.webp">
+      <%# <img src="assets/VER.jpeg"> %>
+      <img src="assets/no-image.png">
+    </div>
+    <ul class="fav-date">
+      <li class="name">
+        マックス・フェルスタッペン
+      </li>
+      <li class="text">
+        レッドブルレーシングからF1へ参戦しているドライバー
+        2020年7月時点でポイントランキングで3位。まだ、22歳と若く今年は最年少F1チャンピオンに期待がかかる。
+      </li>
+      <li class="team">
+        <h4>所属チーム👇</h4>
+        アストンマーティン・レッドブルレーシング
+      </li>
+      <li class="team-text">
+        イギリスに本拠地を置く。F1トップチーム。
+        今年は、フェルスタッペン＆アルボン選手で参戦中。
+        ドライバー・コンストラクターズタイトルをそれぞれ4度獲得している。
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="app-Ex">
+  <h2>このアプリについて</h2>
+  <div class="Ex-text">
+    このアプリは、モータースポーツ専用の写真UPアプリになります。
+    <br>
+    投稿一覧から投稿された写真の閲覧が可能です。投稿を行いたい場合には、
+    <span>
+      <%= link_to "こちら", new_user_registration_path %>
+    </span>
+    からサインアップすることで投稿可能になります。
+  </div>
 </div>
 
+<footer>
+  <div class="cmark">©fmsapp<div>
+</footer>
