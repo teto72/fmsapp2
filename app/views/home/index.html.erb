@@ -5,9 +5,12 @@
   <div class="week-fav bound">
     <h2>今週のおすすめ選手</h2>
     <div class="fav-img">
-      <img src="public/F1VER.webp">
+      <%# <img src="assets/F1VER.webp"> %>
       <%# <img src="assets/VER.jpeg"> %>
-      <img src="public/no-image.png">
+      <%# <img src="assets/no-image.png"> %>
+      <%= image_tag asset_path("F1VER.webp", alt: "お気に入り画像1") %>
+      <%= image_tag asset_path("no-image.png", alt: "お気に入り画像2") %>
+      <%# <%= image_tag asset_path("no-image.png", alt: "お気に入り画像") %>
     </div>
     <ul class="fav-date">
       <li class="name">
